@@ -4,27 +4,51 @@ namespace App\Http\Controllers;
 
 class BlogController
 {
-    public function showblog() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showblog()
+    {
         return view('blog');
     }
 
-    public function showfeedback() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showfeedback()
+    {
         return view('feedback');
     }
 
-    public function showict() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showict()
+    {
         return view('ict');
     }
 
-    public function showervaring() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showervaring()
+    {
         return view('programmeerervaring');
     }
 
-    public function showswot() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showswot()
+    {
         return view('swot');
     }
 
-    public function showstudiekeuze() {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function showstudiekeuze()
+    {
         return view('studiekeuze');
     }
 }
