@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Profile</title>
+</head>
+
+<body class="bckgroundDesign">
+<header class="navigationHeader">
+    <div class="dropdown">
+        <button class="dropbtn"><img id="menuImage"
+                                     src="img\HZ Logo.jpg"></button>
+        <div class="dropdownContent">
+            <a href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen" target="_blank">Onderwijs en Examenregelingen</a>
+            <a href="https://hz.nl/uploads/documents/Regelingen/NL/Uitvoeringsregeling-OER-HBO-ICT-Voltijd-2019-2020.pdf" target="_blank">Uitvoeringsregeling HBO-ICT</a>
+            <a href="https://learn.hz.nl/my/" target="_blank">Learn.hz.nl</a>
+            <a href="https://teams.microsoft.com/l/team/19%3a827654897ab746089c081f24aff1c984%40thread.skype/conversations?groupId=337e8cca-f67d-4132-9fa9-b0c761bbeb94&tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c">Teams</a>
+            <a href="https://apps.hz.nl/angular/studievoortgang/studiestatus" target="_blank">Studievoortgang</a>
+            <a href="https://github.com/HZ-HBO-ICT" target="_blank">Github HBO-ICT</a>
+        </div>
+    </div>
+    <nav class="nav">
+        <ul class="homepage">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li id="active"><a href="#studiekeuze">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article class="fullHeight">
+        <section class="textStyling blogArticle">
+            <h3>Article</h3>
+            <p>Er gaan vele discussies rond over de vraag of het article statement binnen het sectie statement moet komen te staan, of andersom.<br> Op deze pagina geef ik wat informatie over de verschillende meningen.<br><br>Een article is een zelfstandig
+                element wat gekenmerkt wordt door het feit dat het in zijn geheel overgeplaats kan worden naar een andere website.<br>Een section kan dit niet omdat het een onderdeel is van een ander element.</p>
+        </section>
+
+        <section class="textStyling blogSection">
+            <h3>Section Links</h3>
+            <ul>
+                <li><a href="https://www.edictum.nl/lesson/html/2" target="_blank">HTML lesson Edictum</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3 Schools</a></li>
+                <li><a href="https://stackoverflow.com/questions/7549561/section-vs-article-html5#:~:text=is%20related%20to%20%3C,videos%2C%20images%20or%20news%20items." target="_blank">Stack Overflow</a></li>
+            </ul>
+        </section>
+
+        <section class="textStyling blogArticle">
+            <h3>Afsluitend article met mijn mening</h3>
+            <p>Door de verschillende linkjes hebben we kunnen zien wat de meningen zijn op het gebied van article vs section. Het is belangrijk te onthouden dat ieder zijn eigen voorkeur heeft en we die moeten kunnen respecteren. Als u naar mijn voorkeur
+                vraagt, kijk dan nog maar een keer naar deze pagina.</p>
+        </section>
+    </article>
+
+    <article class="fullHeight blogPosts">
+        <section class="textStyling">
+            <h3>Post Studiekeuze</h3>
+            <br>
+            <h4>Motiveer je studiekeuze</h4>
+            <p>Ik heb besloten om deze studie te doen vanwege mijn interesse voor het werken met computers. Tijdens mijn vorige opleiding heb ik het vak ICT gevolgd en ben ik erachter gekomen dat...</p>
+            <p><a href="studiekeuze.html">Lees meer...</a> </p>
+            <img class="img" src="https://www.maashagoort.nl/wp-content/uploads/2021/01/hz.jpg" alt="Afbeelding hz">
+        </section>
+
+        <section class="textStyling">
+            <h3>Post Persoonlijke SWOT analyse</h3>
+            <table>
+                <tr>
+                    <th>Strenghts</th>
+                    <th>Weaknesses</th>
+                </tr>
+            </table>
+            <img class="img" src="https://visionesta.com/storage/wink/images/K2G1i8L8UIXNqKq9RyctSceXaInLeeSrZlORSwdG.jpeg" alt="SWOT analyse">
+            <p><a href="swot.html">Lees meer...</a> </p>
+        </section>
+
+        <section class="textStyling">
+            <h3>Post Programmeerervaring</h3>
+            <table>
+                <tr>
+                    <th>Heb je al programmeerervaring?</th>
+                    <td>Ja</td>
+                </tr>
+            </table>
+            <img class="img" src="https://icttrainingen.nl/media/mageplaza/blog/post/p/h/php-programmeren-voor-beginners_1.png" alt="plaatje van programeren">
+            <p><a href="programmeerervaring.html">Lees meer...</a> </p>
+        </section>
+
+        <section class="textStyling">
+            <h3>Post Feedback</h3>
+            <p>Hoi Jesse, Goed om te lezen dat je enthousiast bent gemaakt door een bekende in de opleiding! En zo te lezen...</p>
+            <p><a href="feedback.html">Lees meer...</a> </p>
+        </section>
+
+        <section class="textStyling">
+            <h3>Post ICT beroepenveld</h3>
+            <p>De bedrijvensafari met onder andere Damen Naval, Your surprise en...</p>
+            <img class="img" src="https://marineschepen.nl/vacatures/images/f126-damen.jpg" alt="Afbeelding Damen Naval">
+            <p><a href="ict.html">Lees meer...</a> </p>
+        </section>
+    </article>
+</main>
+
+<footer id="studiekeuze">
+    <a href="#top">
+        <h2 class="footerDesign">Blog</h2>
+    </a>
+</footer>
+
+</body>
+
+</html>

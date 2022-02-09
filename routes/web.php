@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +33,16 @@ Route::get('/posts/{post}', function ($post) {
     ]);
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/index.html', [WelcomeController::class, 'show']);
+Route::get('/profile.html', [ProfileController::class, 'show']);
+Route::get('/dashboard.html', [DashboardController::class, 'show']);
+Route::get('/faq.html', [FaqController::class, 'show']);
+Route::get('/blog.html', [BlogController::class, 'showblog']);
+
+//verschillende blogpost-links hieronder
+Route::get('feedback.html', [BlogController::class, "showfeedback"]);
+Route::get('swot.html', [BlogController::class, "showswot"]);
+Route::get('ict.html', [BlogController::class, "showict"]);
+Route::get('programmeerervaring.html', [BlogController::class, "showervaring"]);
+Route::get('studiekeuze.html', [BlogController::class, "showstudiekeuze"]);
