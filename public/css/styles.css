@@ -259,3 +259,15 @@ table {
     font-size: 1rem;
     margin: 1%;
 }
+
+/*-- FAQ design --*/
+.ulDesign {
+    list-style-type: none;
+    background-color: #d7d9f2;
+    margin: 1em;
+    padding: 1%;
+    border-color: black;
+    border-width: .3em;
+    border: solid;
+
+}
