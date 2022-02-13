@@ -16,7 +16,7 @@ class FaqController
 
 
         return view('faq', [
-            'posts' => $posts
+            'posts' => $posts,
         ]);
     }
 }
