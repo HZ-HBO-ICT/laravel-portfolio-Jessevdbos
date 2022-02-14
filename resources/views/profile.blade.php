@@ -1,9 +1,5 @@
 @extends('layout')
 
-@section('title')
-    <title>My Profile</title>
-@endsection
-
 @section('styling')
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/profile.css">

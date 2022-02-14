@@ -33,7 +33,7 @@
             <li id="{{ Request::path() ==='blog' ? 'active' : '' }}"><a href="{{ Request::path() ==='blog' ? '#bottom' : 'blog' }}">Blog</a></li>
         </ul>
     </nav>
-    <title>{{ Request::path() }}</title>
+    <title>{{ Request::path() === '/' ? 'homepage' : Request::path() }}</title>
 </header>
 
 <body class="bckgroundDesignIndex">

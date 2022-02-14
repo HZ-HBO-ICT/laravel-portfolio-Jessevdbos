@@ -5,10 +5,6 @@
     <link rel="stylesheet" type="text/css" href="css\dashboard.css">
 @endsection
 
-@section('title')
-    <title>Dashboard</title>
-@endsection
-
 @section('content')
     <main class="dashboardMain fullHeight">
         <div>

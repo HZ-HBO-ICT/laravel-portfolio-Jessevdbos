@@ -5,10 +5,6 @@
     <link rel="stylesheet" type="text/css" href="css\blog.css">
 @endsection
 
-@section('title')
-    <title>Ict-page</title>
-@endsection
-
 @section('content')
     <main>
         <article>

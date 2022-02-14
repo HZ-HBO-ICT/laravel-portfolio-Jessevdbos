@@ -5,10 +5,6 @@
     <link rel="stylesheet" type="text/css" href="css\blog.css">
 @endsection
 
-@section('title')
-    <title>Feedback-page</title>
-@endsection
-
 @section('content')
     <div class="fullHeight">
         <main class="textStyling post">

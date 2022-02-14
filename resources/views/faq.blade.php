@@ -4,10 +4,6 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 @endsection
 
-@section('title')
-    <title>faq-page</title>
-@endsection
-
 @section('content')
     <main>
         <article>
