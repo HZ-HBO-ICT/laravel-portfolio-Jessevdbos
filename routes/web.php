@@ -35,16 +35,15 @@ use App\Http\Controllers\PostController;
 //});
 
 Route::get('/', [WelcomeController::class, 'show']);
-Route::get('/index.html', [WelcomeController::class, 'show']);
-Route::get('/profile.html', [ProfileController::class, 'show']);
-Route::get('/dashboard.html', [DashboardController::class, 'show']);
-Route::get('/faq.html', [FaqController::class, 'show']);
-Route::get('/blog.html', [BlogController::class, 'showblog']);
+Route::get('/profile', [ProfileController::class, 'show']);
+Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/faq', [FaqController::class, 'show']);
+Route::get('/blog', [BlogController::class, 'showblog']);
 Route::get('/post/{name}', [PostController::class, 'show']);
 
 //verschillende blogpost-links hieronder
-Route::get('/feedback.html', [BlogController::class, "showfeedback"]);
-Route::get('/swot.html', [BlogController::class, "showswot"]);
-Route::get('/ict.html', [BlogController::class, "showict"]);
-Route::get('/programmeerervaring.html', [BlogController::class, "showervaring"]);
-Route::get('/studiekeuze.html', [BlogController::class, "showstudiekeuze"]);
+Route::get('/feedback', [BlogController::class, "showfeedback"]);
+Route::get('/swot', [BlogController::class, "showswot"]);
+Route::get('/ict', [BlogController::class, "showict"]);
+Route::get('/programmeerervaring', [BlogController::class, "showervaring"]);
+Route::get('/studiekeuze', [BlogController::class, "showstudiekeuze"]);
