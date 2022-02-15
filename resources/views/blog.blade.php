@@ -78,5 +78,13 @@
                 <p><a href="ict">Lees meer...</a> </p>
             </section>
         </article>
+        <ul class="textStyling">
+            @foreach($articles as $article)
+                <li>
+                    <h3>{{ $article->title }}</h3>
+                    <p>{{ $article->excerpt }}</p>
+                </li>
+            @endforeach
+        </ul>
     </main>
 @endsection

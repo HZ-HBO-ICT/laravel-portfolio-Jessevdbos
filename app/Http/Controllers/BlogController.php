@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+
 class BlogController
 {
     /**
@@ -9,7 +11,10 @@ class BlogController
      */
     public function showblog()
     {
-        return view('blog');
+        $articles = Article::take(3)->latest()->get();
+        return view('blog', [
+            'articles' => $articles
+        ]);
     }
 
     /**

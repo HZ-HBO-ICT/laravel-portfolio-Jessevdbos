@@ -15,10 +15,10 @@ class DashboardController
      */
     public function show()
     {
-        $grades = Grade::all();
+        $grades = (new GradeController)->show();
 
         return view('dashboard', [
-            'grades' => $grades
+            'grades' => $grades,
         ]);
     }
 }
