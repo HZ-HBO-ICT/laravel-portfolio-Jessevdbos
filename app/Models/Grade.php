@@ -9,6 +9,10 @@ class Grade extends Model
 {
     use HasFactory;
 
+    /**
+     * @param $number number of the result that needs to be added
+     * @return void
+     */
     public function addResult($number)
     {
         if ($this->best_grade >= $this->lowest_passing_grade && $number > $this->best_grade) {
