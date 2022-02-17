@@ -38,15 +38,17 @@ use App\Http\Controllers\ArticlesController;
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
-Route::get('/faq', [FaqController::class, 'show']);
-Route::get('/blog', [BlogController::class, 'showblog']);
 Route::get('/post/{name}', [PostController::class, 'show']);
 
-//verschillende blogpost-links hieronder
-Route::get('/feedback', [BlogController::class, "showfeedback"]);
-Route::get('/swot', [BlogController::class, "showswot"]);
-Route::get('/ict', [BlogController::class, "showict"]);
-Route::get('/programmeerervaring', [BlogController::class, "showervaring"]);
-Route::get('/studiekeuze', [BlogController::class, "showstudiekeuze"]);
+// CRUD actions faq
+Route::get('/faq', [FaqController::class, "index"]);
+Route::post('/faq', [FaqController::class, 'store']);
+Route::get('/faq/create', [FaqController::class, 'create']);
+Route::get('/faq/{id}', [FaqController::class, "show"]);
 
+
+// CRUD actions articles
+Route::get('/blog', [BlogController::class, "index"]);
+Route::post('/blog', [ArticlesController::class, 'store']);
+Route::get('/blog/create', [ArticlesController::class, 'create']);
 Route::get('/blog/{article}', [ArticlesController::class, "show"]);
