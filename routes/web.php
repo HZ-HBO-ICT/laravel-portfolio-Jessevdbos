@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,5 @@ Route::get('/swot', [BlogController::class, "showswot"]);
 Route::get('/ict', [BlogController::class, "showict"]);
 Route::get('/programmeerervaring', [BlogController::class, "showervaring"]);
 Route::get('/studiekeuze', [BlogController::class, "showstudiekeuze"]);
+
+Route::get('/blog/{article}', [ArticlesController::class, "show"]);
