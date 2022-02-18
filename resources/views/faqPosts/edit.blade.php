@@ -8,7 +8,7 @@
 @section('content')
     <div>
         <div>
-            <h1>Update Post</h1>
+            <h1 class="titel">Update Post</h1>
 
             <form method="POST" action="/faqs/{{ $faq->id }}">
                 @csrf
@@ -41,6 +41,8 @@
                 <div class="field is-grouped">
                     <div class="control">
                         <button class="button is-link" type="submit">Submit</button>
+
+
                     </div>
                 </div>
 
@@ -49,8 +51,9 @@
             <form method="POST" action="/faqs/{{ $faq->id }}">
                 @csrf
                 @method('DELETE')
-                <button type="submit">Delete</button>
+                <button class="delete" type="submit">Delete</button>
             </form>
+
         </div>
     </div>
 @endsection
