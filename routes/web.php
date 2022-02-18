@@ -41,14 +41,24 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/post/{name}', [PostController::class, 'show']);
 
 // CRUD actions faq
-Route::get('/faq', [FaqController::class, "index"]);
-Route::post('/faq', [FaqController::class, 'store']);
-Route::get('/faq/create', [FaqController::class, 'create']);
-Route::get('/faq/{id}', [FaqController::class, "show"]);
+//Route::get('/faq', [FaqController::class, "index"]);
+//Route::post('/faq', [FaqController::class, 'store']);
+//Route::get('/faq/create', [FaqController::class, 'create']);
+//Route::get('/faq/{id}', [FaqController::class, "show"]);
+//Route::get('/faq/{id}/edit', [FaqController::class, "edit"]);
+//Route::put('/faq/{id}', [FaqController::class, "update"]);
+//Route::delete('/faq/{id}', [FaqController::class, "delete"]);
+
+Route::resource('/faqs', FaqController::class);
 
 
 // CRUD actions articles
-Route::get('/blog', [BlogController::class, "index"]);
-Route::post('/blog', [ArticlesController::class, 'store']);
-Route::get('/blog/create', [ArticlesController::class, 'create']);
-Route::get('/blog/{article}', [ArticlesController::class, "show"]);
+//Route::get('/blog', [ArticlesController::class, "index"]);
+//Route::post('/blog', [ArticlesController::class, 'store']);
+//Route::get('/blog/create', [ArticlesController::class, 'create']);
+//Route::get('/blog/{article}', [ArticlesController::class, "show"]);
+//Route::get('/blog/{article}/edit', [ArticlesController::class, "edit"]);
+//Route::put('/blog/{article}', [ArticlesController::class, "update"]);
+//Route::delete('/blog/{article}', [ArticlesController::class, "delete"]);
+
+Route::resource('/blogs', ArticlesController::class);

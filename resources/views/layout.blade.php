@@ -26,11 +26,11 @@
 {{--    @yield('nav-bar')--}}
     <nav class="navLi nav">
         <ul class="homepage">
-            <li id="{{ Request::path() ==='profile' ? 'active' : '' }}"><a href="{{ Request::path() ==='profile' ? '#bottom' : 'profile' }}">Profile</a></li>
-            <li id="{{ Request::path() ==='dashboard' ? 'active' : '' }}"><a href="{{ Request::path() ==='dashboard' ? '#bottom' : 'dashboard' }}">Dashboard</a></li>
+            <li id="{{ Request::path() ==='profile' ? 'active' : '' }}"><a href="{{ Request::path() ==='profile' ? '#bottom' : '/profile' }}">Profile</a></li>
+            <li id="{{ Request::path() ==='dashboard' ? 'active' : '' }}"><a href="{{ Request::path() ==='dashboard' ? '#bottom' : '/dashboard' }}">Dashboard</a></li>
             <li id="{{ Request::path() ==='/' ? 'active' : '' }}"><a href="{{ Request::path() === '/' ? '#bottom' : '/' }}">Home</a></li>
-            <li id="{{ Request::path() ==='faq' ? 'active' : '' }}"><a href="{{ Request::path() ==='faq' ? '#bottom' : 'faq' }}">FAQ</a></li>
-            <li id="{{ Request::path() ==='blog' ? 'active' : '' }}"><a href="{{ Request::path() ==='blog' ? '#bottom' : 'blog' }}">Blog</a></li>
+            <li id="{{ Request::path() ==='faqs' ? 'active' : '' }}"><a href="{{ Request::path() ==='faqs' ? '#bottom' : '/faqs' }}">FAQ</a></li>
+            <li id="{{ Request::path() ==='blogs' ? 'active' : '' }}"><a href="{{ Request::path() ==='blogs' ? '#bottom' : '/blogs' }}">Blog</a></li>
         </ul>
     </nav>
     <title>{{ Request::path() === '/' ? 'homepage' : Request::path() }}</title>

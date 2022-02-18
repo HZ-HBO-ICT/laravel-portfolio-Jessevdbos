@@ -10,14 +10,15 @@
         <div>
             <h1>New Article</h1>
 
-            <form method="POST" action="/blogs">
+            <form method="POST" action="/blogs/{{ $blogs->id }}">
                 @csrf
+                @method('PUT')
 
                 <div class="field">
-                    <label class="label" for="title">Title</label>
+                    <label class="label" for="title">Update Article</label>
 
                     <div>
-                        <input class="input" type="text" name="title" id="title">
+                        <input class="input" type="text" name="title" id="title" value="{{ $blogs->title }}">
                     </div>
                 </div>
 
@@ -25,7 +26,7 @@
                     <label class="label" for="excerpt">Excerpt</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="excerpt" id="excerpt"></textarea>
+                        <textarea class="textarea" name="excerpt" id="excerpt">{{ $blogs->excerpt }}</textarea>
                     </div>
                 </div>
 
@@ -33,7 +34,7 @@
                     <label class="label" for="body">Body</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="body" id="body"></textarea>
+                        <textarea class="textarea" name="body" id="body">{{ $blogs->body }}</textarea>
                     </div>
                 </div>
 
@@ -43,6 +44,12 @@
                     </div>
                 </div>
 
+            </form>
+
+            <form method="POST" action="/blogs/{{ $blogs->id }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
             </form>
         </div>
     </div>

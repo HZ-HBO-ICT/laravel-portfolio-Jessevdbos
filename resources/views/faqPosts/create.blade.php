@@ -10,7 +10,7 @@
         <div>
             <h1>New Post</h1>
 
-            <form method="POST" action="/faq">
+            <form method="POST" action="/faqs">
                 @csrf
 
                 <div class="field">

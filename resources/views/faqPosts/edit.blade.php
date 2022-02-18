@@ -8,32 +8,33 @@
 @section('content')
     <div>
         <div>
-            <h1>New Article</h1>
+            <h1>Update Post</h1>
 
-            <form method="POST" action="/blogs">
+            <form method="POST" action="/faqs/{{ $faq->id }}">
                 @csrf
+                @method('PUT')
 
                 <div class="field">
-                    <label class="label" for="title">Title</label>
+                    <label class="label" for="question">Question</label>
 
                     <div>
-                        <input class="input" type="text" name="title" id="title">
+                        <input class="input" type="text" name="question" id="question" value="{{ $faq->question }}">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="excerpt">Excerpt</label>
+                    <label class="label" for="answer">Answer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="excerpt" id="excerpt"></textarea>
+                        <textarea class="textarea" name="answer" id="answer">{{ $faq->answer }}</textarea>
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="body">Body</label>
+                    <label class="label" for="link">Link</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="body" id="body"></textarea>
+                        <textarea class="textarea" name="link" id="link">{{ $faq->link }}</textarea>
                     </div>
                 </div>
 
@@ -43,6 +44,12 @@
                     </div>
                 </div>
 
+            </form>
+
+            <form method="POST" action="/faqs/{{ $faq->id }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
             </form>
         </div>
     </div>
