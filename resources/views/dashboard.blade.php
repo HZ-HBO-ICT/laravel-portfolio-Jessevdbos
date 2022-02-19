@@ -2,7 +2,7 @@
 
 @section('styling')
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css\dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 @endsection
 
 @section('content')

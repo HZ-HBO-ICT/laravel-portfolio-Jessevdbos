@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @yield('title')
+    <title>{{ Request::path() === '/' ? 'homepage' : Request::path() }}</title>
 </head>
 
 <header class="navigationHeader">
@@ -33,7 +33,6 @@
             <li id="{{ Request::path() ==='blogs' ? 'active' : '' }}"><a href="{{ Request::path() ==='blogs' ? '#bottom' : '/blogs' }}">Blog</a></li>
         </ul>
     </nav>
-    <title>{{ Request::path() === '/' ? 'homepage' : Request::path() }}</title>
 </header>
 
 <body class="bckgroundDesignIndex">
