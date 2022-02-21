@@ -10,14 +10,14 @@
         <div>
             <h1>New Post</h1>
 
-            <form method="POST" action="/faqs">
+            <form method="POST" action="{{ route('faqs.index') }}">
                 @csrf
 
                 <div class="field">
                     <label class="label" for="question">Question</label>
 
                     <div>
-                        <input class="input" type="text" name="question" id="question">
+                        <input class="input" type="text" name="question" id="question" required>
                     </div>
                 </div>
 
@@ -25,7 +25,7 @@
                     <label class="label" for="answer">Answer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="answer" id="answer"></textarea>
+                        <textarea class="textarea" name="answer" id="answer" required></textarea>
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@
                     <label class="label" for="link">Link</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="link" id="link"></textarea>
+                        <textarea class="textarea" name="link" id="link" required></textarea>
                     </div>
                 </div>
 

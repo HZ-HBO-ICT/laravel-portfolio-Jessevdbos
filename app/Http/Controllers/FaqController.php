@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use http\Env\Request;
 
 class FaqController
 {
@@ -10,10 +11,8 @@ class FaqController
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show(Faq $faq)
     {
-        $faq = Faq::find($id);
-
         return view('faqPosts.show', ['faq' => $faq]);
     }
 
@@ -42,26 +41,24 @@ class FaqController
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store()
+    public function store(Request $request)
     {
         $faq = new Faq();
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
+        $faq->question = $request;
+        $faq->answer = $request;
+        $faq->link = $request;
 
         $faq->save();
 
-        return redirect('/faqs');
+        return redirect(route('faqs.index'));
     }
 
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        $faq = Faq::find($id);
-
         return view('faqPosts.edit', ['faq' => $faq]);
     }
 
@@ -69,26 +66,24 @@ class FaqController
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update($id)
+    public function update(Request $request, Faq $faq)
     {
-        $faq = Faq::find($id);
-
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
+        $faq->question = $request;
+        $faq->answer = $request;
+        $faq->link = $request;
         $faq->save();
 
-        return redirect('/faqs/' . $faq->id);
+        return redirect(route('faqs.show', $faq));
     }
 
     /**
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy($id)
+    public function destroy($faq)
     {
-        Faq::destroy($id);
+        Faq::destroy($faq);
 
-        return redirect('/faqs');
+        return redirect(route('faqs.index'));
     }
 }

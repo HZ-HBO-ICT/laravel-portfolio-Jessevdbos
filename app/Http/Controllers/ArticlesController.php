@@ -22,11 +22,9 @@ class ArticlesController extends Controller
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show(Article $blog)
     {
-        $article = Article::find($id);
-
-        return view('blogPosts.show', ['article' => $article]);
+        return view('blogPosts.show', ['article' => $blog]);
     }
 
     /**
@@ -40,53 +38,50 @@ class ArticlesController extends Controller
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function store()
+    public function store(Request $request)
     {
         $article = new Article();
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
+        $article->title = $request;
+        $article->excerpt = $request;
+        $article->body = $request;
 
         $article->save();
 
-        return redirect('/blogs');
+        return redirect(route('blogs.index'));
     }
 
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($id)
+    public function edit(Article $blog)
     {
-        $article = Article::find($id);
-
-        return view('blogPosts.edit', ['blogs' => $article]);
+        return view('blogPosts.edit', ['blog' => $blog]);
     }
 
     /**
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update($id)
+    public function update(Request $request, Article $blog)
     {
-        $article = Article::find($id);
+        $blog->title = $request;
+        $blog->excerpt = $request;
+        $blog->body = $request;
+        $blog->save();
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->save();
-
-        return redirect('/blogs/' . $article->id);
+        return redirect(route('blogs.show', $blog));
     }
 
     /**
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy($id)
+    public function destroy($blog)
     {
-        Article::destroy($id);
+        // w3schools
+        Article::destroy($blog);
 
-        return redirect('/blogs');
+        return redirect(route('blogs.index'));
     }
 }

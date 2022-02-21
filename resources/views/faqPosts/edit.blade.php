@@ -10,7 +10,7 @@
         <div>
             <h1 class="titel">Update Post</h1>
 
-            <form method="POST" action="/faqs/{{ $faq->id }}">
+            <form method="POST" action="{{ route('faqs.show', $faq) }}">
                 @csrf
                 @method('PUT')
 
@@ -18,7 +18,7 @@
                     <label class="label" for="question">Question</label>
 
                     <div>
-                        <input class="input" type="text" name="question" id="question" value="{{ $faq->question }}">
+                        <input class="input" type="text" name="question" id="question" value="{{ $faq->question }}" required>
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
                     <label class="label" for="answer">Answer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="answer" id="answer">{{ $faq->answer }}</textarea>
+                        <textarea class="textarea" name="answer" id="answer" required>{{ $faq->answer }}</textarea>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     <label class="label" for="link">Link</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="link" id="link">{{ $faq->link }}</textarea>
+                        <textarea class="textarea" name="link" id="link" required>{{ $faq->link }}</textarea>
                     </div>
                 </div>
 

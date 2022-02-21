@@ -9,7 +9,7 @@
     <div>
         <h1 class="titel">New Article</h1>
 
-        <form method="POST" action="/blogs/{{ $blogs->id }}">
+        <form method="POST" action="{{ route('blogs.show', $blog->id) }}">
             @csrf
             @method('PUT')
 
@@ -17,7 +17,7 @@
                 <label class="label" for="title">Update Article</label>
 
                 <div>
-                    <input class="input" type="text" name="title" id="title" value="{{ $blogs->title }}">
+                    <input class="input" type="text" name="title" id="title" value="{{ $blog->title }}" required>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
                 <label class="label" for="excerpt">Excerpt</label>
 
                 <div class="control">
-                    <textarea class="textarea" name="excerpt" id="excerpt">{{ $blogs->excerpt }}</textarea>
+                    <textarea class="textarea" name="excerpt" id="excerpt" required>{{ $blog->excerpt }}</textarea>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <label class="label" for="body">Body</label>
 
                 <div class="control">
-                    <textarea class="textarea" name="body" id="body">{{ $blogs->body }}</textarea>
+                    <textarea class="textarea" name="body" id="body" required>{{ $blog->body }}</textarea>
                 </div>
             </div>
 
@@ -45,7 +45,7 @@
 
         </form>
 
-        <form method="POST" action="/blogs/{{ $blogs->id }}">
+        <form method="POST" action="/blogs/{{ $blog->id }}">
             @csrf
             @method('DELETE')
             <button class="delete" type="submit">Delete</button>
