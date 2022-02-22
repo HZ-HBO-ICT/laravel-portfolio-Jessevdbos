@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GradeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
@@ -39,6 +40,7 @@ Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/post/{name}', [PostController::class, 'show']);
+Route::resource('/grades', GradeController::class);
 
 // CRUD actions faq
 //Route::get('/faq', [FaqController::class, "index"]);

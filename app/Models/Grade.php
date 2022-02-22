@@ -9,6 +9,8 @@ class Grade extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['course_name', 'test_name', 'lowest_passing_grade', 'best_grade'];
+
     /**
      * @param $number number of the result that needs to be added
      * @return void

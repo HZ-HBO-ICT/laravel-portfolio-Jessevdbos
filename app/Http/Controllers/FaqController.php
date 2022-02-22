@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
 class FaqController
 {
@@ -68,10 +68,7 @@ class FaqController
      */
     public function update(Request $request, Faq $faq)
     {
-        $faq->question = $request;
-        $faq->answer = $request;
-        $faq->link = $request;
-        $faq->save();
+        $faq->update($this->validateFaq($request));
 
         return redirect(route('faqs.show', $faq));
     }
@@ -80,10 +77,23 @@ class FaqController
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy($faq)
+    public function destroy(Faq $faq)
     {
-        Faq::destroy($faq);
+        $faq->delete();
 
         return redirect(route('faqs.index'));
+    }
+
+    /**
+     * @param Request $request
+     * @return array
+     */
+    public function validateFaq(Request $request): array
+    {
+        return $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'link' => '',
+        ]);
     }
 }

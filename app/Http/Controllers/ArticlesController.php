@@ -65,10 +65,7 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, Article $blog)
     {
-        $blog->title = $request;
-        $blog->excerpt = $request;
-        $blog->body = $request;
-        $blog->save();
+        $blog->update($this->validateBlog($request));
 
         return redirect(route('blogs.show', $blog));
     }
@@ -77,11 +74,24 @@ class ArticlesController extends Controller
      * @param $id number of the article
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy($blog)
+    public function destroy(Article $blog)
     {
         // w3schools
-        Article::destroy($blog);
+        $blog->delete();
 
         return redirect(route('blogs.index'));
+    }
+
+    /**
+     * @param Request $request request
+     * @return array
+     */
+    public function validateBlog(Request $request): array
+    {
+        return $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+        ]);
     }
 }

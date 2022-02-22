@@ -17,12 +17,6 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        foreach (range(1, 100) as $index) {
-            DB::table('articles')->insert([
-                'title' =>  Str::random(10),
-                'excerpt' => Str::random(20),
-                'body' => Str::random(30)
-            ]);
-        }
+        Article::factory(100)->create();
     }
 }
