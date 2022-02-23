@@ -18,9 +18,9 @@ class GradeController extends Controller
      */
     public function index()
     {
-        $grade = Grade::all();
+        $grades = Grade::all();
 
-        return view('grades.index', ['grades' => $grade]);
+        return view('grades.index', ['grades' => $grades]);
     }
 
     /**
@@ -42,19 +42,9 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         Grade::create($this->validateGrade($request));
+
         return redirect(route('grades.index'));
     }
-
-//    /**
-//     * Display the specified resource.
-//     *
-//     * @param  \App\Models\Grade  $grade
-//     * @return Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
-//     */
-//    public function show(Grade $grade)
-//    {
-//        return view('grades.show', ['grade' => $grade]);
-//    }
 
     /**
      * Show the form for editing the specified resource.

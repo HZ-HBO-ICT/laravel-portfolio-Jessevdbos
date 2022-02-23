@@ -37,8 +37,8 @@ use App\Http\Controllers\ArticlesController;
 //});
 
 Route::get('/', [WelcomeController::class, 'show']);
-Route::get('/profile', [ProfileController::class, 'show']);
-Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/dashboard', [GradeController::class, 'index']);
 Route::get('/post/{name}', [PostController::class, 'show']);
 Route::resource('/grades', GradeController::class);
 

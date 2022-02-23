@@ -7,7 +7,7 @@ class ProfileController
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show()
+    public function index()
     {
         return view('profile');
     }

@@ -13,6 +13,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles = Article::take(3)->latest()->get();
+
         return view('blog', [
             'articles' => $articles
         ]);
@@ -40,13 +41,7 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        $article = new Article();
-
-        $article->title = $request;
-        $article->excerpt = $request;
-        $article->body = $request;
-
-        $article->save();
+        Article::create($this->validateBlog($request));
 
         return redirect(route('blogs.index'));
     }
@@ -76,7 +71,6 @@ class ArticlesController extends Controller
      */
     public function destroy(Article $blog)
     {
-        // w3schools
         $blog->delete();
 
         return redirect(route('blogs.index'));

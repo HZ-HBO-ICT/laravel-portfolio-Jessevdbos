@@ -21,12 +21,10 @@ class FaqController
      */
     public function index()
     {
-        $posts = Faq::all();
-
-
+        $faqs = Faq::all();
 
         return view('faq', [
-            'posts' => $posts,
+            'posts' => $faqs,
         ]);
     }
 
@@ -43,13 +41,7 @@ class FaqController
      */
     public function store(Request $request)
     {
-        $faq = new Faq();
-
-        $faq->question = $request;
-        $faq->answer = $request;
-        $faq->link = $request;
-
-        $faq->save();
+        Faq::create($this->validateFaq($request));
 
         return redirect(route('faqs.index'));
     }
