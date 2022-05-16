@@ -31,7 +31,20 @@
             <li id="{{ Request::path() ==='/' ? 'active' : '' }}"><a href="{{ Request::path() === '/' ? '#bottom' : '/' }}">Home</a></li>
             <li id="{{ Request::path() ==='faqs' ? 'active' : '' }}"><a href="{{ Request::path() ==='faqs' ? '#bottom' : route('faqs.index') }}">FAQ</a></li>
             <li id="{{ Request::path() ==='blogs' ? 'active' : '' }}"><a href="{{ Request::path() ==='blogs' ? '#bottom' : route('blogs.index') }}">Blog</a></li>
-            <li id="{{ Request::path() ==='login' ? 'active' : '' }}"><a href="{{ Request::path() ==='login' ? '#bottom' : '/login' }}">login</a></li>
+            <li id="{{ Request::path() ==='login' ? 'active' : '' }}" style="color: white">
+                <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" class="img-login">
+                @if(Auth::check())
+                    <ul>
+                        <li style="position: absolute; left: 165vh; top: -11.5vh;"><h5>{{ Auth::user()->name }}</h5></li>
+                        <li style="position: absolute; left: 170vh; top: -10.5vh;"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Uitloggen</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form></li>
+                    </ul>
+                @else
+                    <a class="nav-link {{ Request::path() === 'login' ? 'active' : '' }}" href="/login">Login</a>
+                @endif
+            </li>
         </ul>
     </nav>
 </header>

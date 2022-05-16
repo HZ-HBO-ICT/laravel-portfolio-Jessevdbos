@@ -52,7 +52,7 @@ nav ul {
 .nav {
     text-align: center;
     justify-content: center;
-    word-spacing: 90px;
+    word-spacing: 20px;
     position: sticky;
     top: 0;
     margin-left: 50px;
@@ -270,4 +270,9 @@ table {
     border-width: .3em;
     border: solid;
 
+}
+
+.img-login {
+    width: 2vh;
+    height: 2vh;
 }
