@@ -1,9 +1,8 @@
 /* ---- dashboard page layout ---- */
 
-aside {
-    display: inline;
+.aside {
     text-align: center;
-    position: absolute;
+    position: fixed;
     right: 10%;
     top: 40%;
     background-color: lightgray;

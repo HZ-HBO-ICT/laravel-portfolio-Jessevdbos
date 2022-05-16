@@ -15,6 +15,7 @@ class CreateGradesTable extends Migration
     {
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('course_id');
             $table->string('course_name');
             $table->string('test_name');
             $table->decimal(
@@ -25,12 +26,9 @@ class CreateGradesTable extends Migration
                 'Lowest grade to pass so average calculations can be applied'
             );
             $table->decimal('best_grade', 3, 1)->nullable();
-            $table->date(
-                'passed_at'
-            )->nullable()->comment(
-                'Date that the grade was larger than or equal to the lowest passing grade'
-            );
             $table->timestamps();
+
+//            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
         });
     }
 

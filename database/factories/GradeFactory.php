@@ -14,11 +14,11 @@ class GradeFactory extends Factory
     public function definition()
     {
         return [
+            'course_id' => $this->faker->numberBetween(1, 10),
             'course_name' => $this->faker->name,
             'test_name' => $this->faker->title,
             'lowest_passing_grade' => 5.5,
             'best_grade' => $this->faker->boolean(75) ? $this->faker->numberBetween(1, 10): null,
-            'passed_at' => now()
         ];
     }
 }

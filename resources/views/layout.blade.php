@@ -27,10 +27,11 @@
     <nav class="navLi nav">
         <ul class="homepage">
             <li id="{{ Request::path() ==='profile' ? 'active' : '' }}"><a href="{{ Request::path() ==='profile' ? '#bottom' : '/profile' }}">Profile</a></li>
-            <li id="{{ Request::path() ==='dashboard' ? 'active' : '' }}"><a href="{{ Request::path() ==='dashboard' ? '#bottom' : '/dashboard' }}">Dashboard</a></li>
+            <li id="{{ Request::path() ==='dashboardSchools' ? 'active' : '' }}"><a href="{{ Request::path() ==='dashboardSchools' ? '#bottom' : route('dashboardSchools.index') }}">Dashboard</a></li>
             <li id="{{ Request::path() ==='/' ? 'active' : '' }}"><a href="{{ Request::path() === '/' ? '#bottom' : '/' }}">Home</a></li>
-            <li id="{{ Request::path() ==='faqs' ? 'active' : '' }}"><a href="{{ Request::path() ==='faqs' ? '#bottom' : '/faqs' }}">FAQ</a></li>
-            <li id="{{ Request::path() ==='blogs' ? 'active' : '' }}"><a href="{{ Request::path() ==='blogs' ? '#bottom' : '/blogs' }}">Blog</a></li>
+            <li id="{{ Request::path() ==='faqs' ? 'active' : '' }}"><a href="{{ Request::path() ==='faqs' ? '#bottom' : route('faqs.index') }}">FAQ</a></li>
+            <li id="{{ Request::path() ==='blogs' ? 'active' : '' }}"><a href="{{ Request::path() ==='blogs' ? '#bottom' : route('blogs.index') }}">Blog</a></li>
+            <li id="{{ Request::path() ==='login' ? 'active' : '' }}"><a href="{{ Request::path() ==='login' ? '#bottom' : '/login' }}">login</a></li>
         </ul>
     </nav>
 </header>
@@ -41,7 +42,7 @@
 
 </body>
 
-<footer id="bottom">
+<footer id="bottom" class="footer">
     <a href="#top">
         <h2 class="footerDesign">Home</h2>
     </a>

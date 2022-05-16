@@ -21,6 +21,7 @@ class FaqController
      */
     public function index()
     {
+//        abort(404);
         $faqs = Faq::all();
 
         return view('faq', [

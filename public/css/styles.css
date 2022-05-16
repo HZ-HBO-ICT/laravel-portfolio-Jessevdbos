@@ -16,7 +16,6 @@ p {
 body {
     background: url("../afbeeldingen website/IMG_20181204_214347_007.jpg") no-repeat center center fixed;
     background-size: 500px;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +52,7 @@ nav ul {
 .nav {
     text-align: center;
     justify-content: center;
-    word-spacing: 100px;
+    word-spacing: 90px;
     position: sticky;
     top: 0;
     margin-left: 50px;
@@ -197,10 +196,12 @@ img {
 
 /* twee footer css voor vormgeving */
 
-footer {
+.footer {
+    position: absolute;
     background-color: rgba(0, 0, 0, .6);
     background-size: cover;
     height: 61px;
+    width: 100%;
     background-blend-mode: multiply;
     box-shadow: 0px -10px 15px #777777;
     text-align: center;

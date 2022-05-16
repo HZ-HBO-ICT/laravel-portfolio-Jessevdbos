@@ -9,6 +9,7 @@ class ProfileController
      */
     public function index()
     {
+        abort(500);
         return view('profile');
     }
 }

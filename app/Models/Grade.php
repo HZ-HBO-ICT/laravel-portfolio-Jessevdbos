@@ -11,18 +11,23 @@ class Grade extends Model
 
     protected $fillable = ['course_name', 'test_name', 'lowest_passing_grade', 'best_grade'];
 
-    /**
-     * @param $number number of the result that needs to be added
-     * @return void
-     */
-    public function addResult($number)
+    public function course()
     {
-        if ($number > $this->best_grade) {
-            if ($number >= $this->lowest_passing_grade && $this->passed_at == null) {
-                $this->passed_at = now();
-            }
-            $this->best_grade = $number;
-            $this->save();
-        }
+        return $this->belongsTo(Course::class);
     }
+
+//    /**
+//     * @param $number number of the result that needs to be added
+//     * @return void
+//     */
+//    public function addResult($number)
+//    {
+//        if ($number > $this->best_grade) {
+//            if ($number >= $this->lowest_passing_grade && $this->passed_at == null) {
+//                $this->passed_at = now();
+//            }
+//            $this->best_grade = $number;
+//            $this->save();
+//        }
+//    }
 }
