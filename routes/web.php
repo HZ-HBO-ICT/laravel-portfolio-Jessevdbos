@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GradeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,21 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}', function ($post) {
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
-
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('welcome');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware(['auth']);
+
+Route::resource('/dashboardSchools', GradeController::class)->middleware(['auth']);
+Route::resource('/faqs', \App\Http\Controllers\FaqController::class)->middleware(['auth']);
+Route::resource('/blogs', \App\Http\Controllers\ArticlesController::class)->middleware(['auth']);
+

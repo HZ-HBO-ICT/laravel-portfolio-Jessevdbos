@@ -1,0 +1,39 @@
+/* ---- Index page layout ---- */
+
+.intro {
+    max-width: 50%;
+    margin-bottom: 40px;
+    position: relative;
+    right: 25%;
+    left: 25%
+}
+
+.ictImage {
+    padding: 3px;
+    height: 300px;
+    position: absolute;
+    left: 3%;
+    top: 150%;
+}
+
+.me2Picture {
+    height: 500px;
+    position: absolute;
+    right: 3%;
+    top: 125%;
+    padding: 3px;
+}
+
+.bos {
+    margin-left: 10%;
+    margin-top: 30%;
+    color: white;
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(0, 0, 0, .6);
+    border: solid;
+    border-radius: 20%;
+    max-width: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+}

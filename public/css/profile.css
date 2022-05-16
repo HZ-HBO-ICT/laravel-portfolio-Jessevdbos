@@ -1,0 +1,65 @@
+/* ---- Profile page design ---- */
+
+.profileTextPersonal {
+    max-width: 40%;
+    position: initial;
+    margin: 1%;
+    top: 20%;
+}
+
+#mePicture {
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    padding: .3em;
+}
+
+.profileTextHobby {
+    max-width: 45%;
+    position: absolute;
+    right: 5%;
+    top: 110%;
+}
+
+.leagueImage {
+    width: 40%;
+    border-radius: 10%;
+    padding: .3em;
+    position: initial;
+    margin: 1%;
+    top: 120%;
+}
+
+.characteristics {
+    width: 40%;
+    position: initial;
+    margin: 1%;
+    top: 80%;
+}
+
+.characteristics li {
+    text-align: left;
+}
+
+.fateSeries {
+    max-width: 45%;
+    max-height: 45%;
+    border-radius: 10%;
+    padding: .3em;
+    position: absolute;
+    right: 5%;
+    top: 160%;
+}
+
+.animeList {
+    width: 40%;
+    position: absolute;
+    left: 1%;
+    top: 165%;
+}
+
+.animeList li {
+    text-align: left;
+}

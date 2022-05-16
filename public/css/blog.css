@@ -1,0 +1,102 @@
+/* ---- blog page ---- */
+
+section {
+    width: 50%;
+    position: inherit;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.img {
+    max-width: 50%;
+    height: 70%;
+    position: relative;
+    right: 3%;
+}
+
+.blogArticle {
+    max-width: 50%;
+    margin-left: 1%;
+    position: inherit;
+    left: 1%;
+    margin-bottom: 1%;
+}
+
+.blogSection {
+    max-width: 50%;
+    margin-left: 1%;
+    position: relative;
+    left: 40%;
+    top: 50%;
+    margin-bottom: 1%;
+}
+
+.blogPosts {
+    margin-left: 1%;
+}
+
+
+/* css gebruikt in de posts */
+
+.post {
+    text-align: center;
+    max-width: 50%;
+    margin: 1%;
+}
+
+.post img {
+    max-width: 50%;
+    height: 70%;
+    position: relative;
+    right: 3%;
+}
+
+.damen {
+    width: 500%;
+}
+
+.white_background {
+    background-color: rgb(255,255,255, 0.6);
+    padding: 1%;
+    marin: 3%;
+}
+
+.field {
+    background-color: rgb(255,255,255);
+    margin: .5%;
+    padding: 1%;
+    border-radius: 10px;
+    border: .15em solid rgb(10, 10, 10, 0.4);
+}
+
+.titel {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: rgb(255,255,255, 0.9);
+    margin: .5%;
+    padding: 1%;
+    border-radius: 10px;
+    border: .15em solid rgb(10, 10, 10, 0.4);
+}
+
+.label {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.textarea {
+    width: 100%;
+    height: 5cm;
+}
+
+.input {
+    width: 100%;
+    height: 1cm;
+}
+
+.delete {
+    position: relative;
+    left: 5.5%;
+    top: -52px;
+}

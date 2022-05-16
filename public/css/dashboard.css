@@ -1,0 +1,25 @@
+/* ---- dashboard page layout ---- */
+
+.aside {
+    text-align: center;
+    position: fixed;
+    right: 10%;
+    top: 40%;
+    background-color: lightgray;
+    border: solid;
+    border-color: black;
+    border-width: .2em;
+    border-radius: 20px;
+}
+
+.dashboardMain {
+    margin-bottom: 50px;
+}
+
+.passed {
+    background-color: limegreen;
+}
+
+.notPassed {
+    background-color: red;
+}
